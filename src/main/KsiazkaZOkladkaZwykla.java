@@ -7,7 +7,12 @@ public class KsiazkaZOkladkaZwykla implements Publikacja{
 	public KsiazkaZOkladkaZwykla(Publikacja publication)
 	{		
 		this.publikacja = publication;
-	}
+		if(publikacja.toString().contains("okladka zwykla") || publikacja.toString().contains("okladka twarda"))
+		{
+			throw new IllegalArgumentException("Ta ksi¹¿ka ma ju¿ ok³adkê");
+		}
+		
+	}	
 	
 	@Override
 	public String toString()
@@ -32,4 +37,5 @@ public class KsiazkaZOkladkaZwykla implements Publikacja{
 		// TODO Auto-generated method stub
 		return publikacja.getIloscStron();
 	}
+	
 }

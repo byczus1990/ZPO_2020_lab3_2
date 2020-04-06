@@ -9,6 +9,11 @@ public class KsiazkaZAutografem implements Publikacja{
 	{		
 		this.publikacja = publication;
 		this.autograf = autograf;
+		boolean isAlreadyAutographed = publikacja instanceof KsiazkaZAutografem;
+		if (isAlreadyAutographed)
+		{
+			throw new IllegalArgumentException("Ta ksi¹¿ka ma ju¿ autograf");
+		}
 	}
 
 	@Override

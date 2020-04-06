@@ -7,6 +7,10 @@ public class KsiazkaZOkladkaTwarda implements Publikacja{
 	public KsiazkaZOkladkaTwarda(Publikacja publication)
 	{
 		this.publikacja = publication;
+		if(publikacja.toString().contains("okladka zwykla") || publikacja.toString().contains("okladka twarda"))
+		{
+			throw new IllegalArgumentException("Ta ksi¹¿ka ma ju¿ ok³adkê");
+		}
 	}
 	
 	@Override

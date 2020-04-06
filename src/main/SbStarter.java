@@ -13,7 +13,6 @@ public class SbStarter {
 //		Publikacja kkk3 = new KsiazkaZObwoluta(kkk2);
 //		Publikacja kkk4 = new KsiazkaZObwoluta(k1);
 		Publikacja dziadyZAutografemWieszcza = new KsiazkaZAutografem(kk2, "Drogiej Hani - Adam Mickiewicz");
-//		Publikacja dziadyZDwomaAutografami = new KsiazkaZAutografem(dziadyZAutografemWieszcza, "Haniu, to nieprawda, Dziady napisa³em ja, Julek S³owacki!");
 
 		System.out.print(k1 + "\n");
 		System.out.print(kk1 + "\n");

@@ -8,20 +8,15 @@ public class KsiazkaZObwoluta implements Publikacja{
 	{		
 		this.publikacja = publication;
 		if(publikacja.toString().contains("okladka zwykla") || publikacja.toString().contains("okladka twarda"))
-		{
-									
+		{			
+			if (publikacja.toString().contains("obwoluta"))	
+			{
+				throw new IllegalArgumentException("Ta ksi¹¿ka ma ju¿ obwolutê");
+			}
 		}else
-		{
-			throw new IllegalArgumentException("Ta ksi¹¿ka nie ma ok³adki");
-		}
-		
-		boolean isAlreadyDecorated = publikacja instanceof KsiazkaZObwoluta;
-		
-		// NIE ROZUMIEM CZEMU TEN WARUNEK NI¯EJ ZAWSZE WCHODZI W WYRZUCANIE WYJ¥TKU
-//		if(isAlreadyDecorated != false);
-//		{
-//			throw new IllegalArgumentException("Ta ksi¹¿ka ma ju¿ obwolutê");
-//		}
+			{
+				throw new IllegalArgumentException("Ta ksi¹¿ka nie ma ok³adki");
+			}		
 	}
 	
 	@Override
